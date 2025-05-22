@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Typing Speed Test</title>
+  <link rel="stylesheet" href="style.css">
+
+  </head>
+<body>
+  <div class="container">
+    <h1>Typing Speed Test</h1>
+
+    <div class="controls">
+      <label for="duration">Test Duration:</label>
+      <select id="duration">
+        <option value="30">30s</option>
+        <option value="60">60s</option>
+        <option value="120">120s</option>
+      </select>
+
+      <label for="language">Language:</label>
+      <select id="language">
+        <option value="en">English</option>
+        <option value="hi">Hindi</option>
+      </select>
+
+      <button onclick="startTest()">Start</button>
+      <button onclick="restartTest()">Restart</button>
+      <button onclick="toggleTheme()">Toggle Dark Mode</button>
+    </div>
+
+    <div id="progress-bar-container">
+      <div id="progress-bar"></div>
+    </div>
+
+    <div class="text-display" id="text-display"></div>
+
+    <textarea id="input" disabled oninput="checkInput()"></textarea>
+
+    <div class="stats">
+      <p id="timer">Time: 0s</p>
+      <p id="char-count">Characters Typed: 0</p>
+      <p id="speed">Speed: 0 WPM</p>
+      <p id="accuracy">Accuracy: 0%</p>
+    </div>
+
+    <div id="summary" style="display: none;"></div>
+  </div>
+  <script src="script.js"></script>
+  </body>
+</html>
